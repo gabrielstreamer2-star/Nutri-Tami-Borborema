@@ -1,0 +1,5 @@
+
+body { font-family:'Fonte2', sans-serif; background-color:#F5F5F5; color:#333333; padding:20px; }
+h2 { color:#D4A017; }
+button { padding:10px 20px; border:none; background-color:#D4A017; color:#fff; border-radius:8px; cursor:pointer; transition:0.3s; }
+button:hover { background-color:#A8D5BA; color:#333; transform: scale(1.05); }

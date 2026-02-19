@@ -1,0 +1,132 @@
+/* Paleta de cores */
+:root {
+  --marrom-dourado: #D4A017;
+  --branco: #FFFFFF;
+  --verde-claro: #A8E6CF;
+  --cinza-claro: #F5F5F5;
+}
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--cinza-claro);
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Container central */
+.online-container {
+  width: 100%;
+  max-width: 480px;
+  background-color: var(--branco);
+  border-radius: 20px;
+  padding: 35px 25px;
+  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+/* Botão voltar */
+/* Botão voltar como botão normal */
+.back-button {
+  width: 100%;               /* mesmo tamanho dos inputs e botão enviar */
+  padding: 14px;
+  background-color: var(--verde-claro);
+  color: var(--marrom-dourado);
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1em;
+  transition: all 0.3s ease;
+  margin-top: 15px;          /* espaço entre o formulário e o botão voltar */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.12);
+}
+
+.back-button:hover {
+  background-color: var(--marrom-dourado);
+  color: var(--branco);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.18);
+  transform: translateY(-2px);
+}
+
+
+/* Inputs e textarea estilizados */
+input, textarea {
+  width: 100%;
+  padding: 14px 15px;
+  margin-bottom: 18px;
+  border: 2px solid var(--verde-claro);
+  border-radius: 14px;
+  font-size: 1em;
+  outline: none;
+  transition: all 0.3s ease;
+  background-color: #fff;
+}
+
+input:focus, textarea:focus {
+  border-color: var(--marrom-dourado);
+  box-shadow: 0 0 12px rgba(212,160,23,0.3);
+}
+
+/* Placeholder estilizado */
+input::placeholder, textarea::placeholder {
+  color: #888;
+  font-style: italic;
+}
+
+/* Botão moderno */
+button {
+  width: 100%;
+  padding: 15px;
+  background-color: var(--marrom-dourado);
+  color: var(--branco);
+  font-size: 1.1em;
+  font-weight: bold;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+button:hover {
+  background-color: var(--verde-claro);
+  color: var(--marrom-dourado);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.25);
+  transform: translateY(-2px);
+}
+
+/* Mensagem de status */
+#status {
+  margin-top: 18px;
+  font-weight: bold;
+  text-align: center;
+  min-height: 20px;
+  transition: 0.3s;
+}
+
+/* Responsivo */
+@media (max-width: 500px) {
+  .online-container {
+    padding: 25px 20px;
+  }
+  h1 {
+    font-size: 1.7em;
+  }
+  .back-button {
+    padding: 6px 12px;
+    font-size: 0.9em;
+  }
+}
